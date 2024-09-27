@@ -22,6 +22,7 @@ print("")
 ip = input("目标IP:")
 port = int(input("目标端口:"))
 many = input("虚拟主机数量(注意不要太高,除非家里有条件):")
+print("脚本运行中,脚本不会显示发送数量...")
 
 many = int(many)
 
@@ -41,5 +42,3 @@ for i in range(many):
 
 for thread in threads:
     thread.join()
-
-print("脚本运行中,脚本不会显示发送数量...")
