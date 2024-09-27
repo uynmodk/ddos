@@ -41,3 +41,5 @@ for i in range(many):
 
 for thread in threads:
     thread.join()
+
+print("脚本运行中,脚本不会显示发送数量...")
